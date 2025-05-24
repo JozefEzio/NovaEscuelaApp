@@ -6,17 +6,17 @@ function Testimonials() {
     const testimonials = [
         {
             text: "Nova Escuela transformed how I track student progress. The weekly insights are incredibly valuable.",
-            author: "Mr. Reyes",
+            author: "Mr. Ahmed",
             role: "High School Teacher"
         },
         {
             text: "It's easy to use and gives me clear feedback every week. I can see my improvement clearly.",
-            author: "Maria Santos",
+            author: "Yassine Mdakri",
             role: "Student"
         },
         {
             text: "The AI insights help me understand my child's learning patterns better than ever before.",
-            author: "Dr. Lopez",
+            author: "Dr. Mohammed",
             role: "Parent"
         }
     ];

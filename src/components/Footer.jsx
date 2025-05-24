@@ -1,3 +1,4 @@
+import logoBack from '../assets/logo2.png'
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -52,6 +53,9 @@ function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <p>&copy; {currentYear} Nova Escuela. All rights reserved.</p>
+          </div>
+          <div className="img">
+            <a href="#"><img src={logoBack} alt="" /></a>
           </div>
           <div className="footer-bottom-right">
             <a href="#privacy">Privacy Policy</a>

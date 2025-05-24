@@ -7,6 +7,7 @@
   --colorVeryLightBlue: #027aeb;
   --colorDarkBlue: #002147;
   --colorLight: #F0F8FF;
+  --colorLightGradiant: linear-gradient(135deg, #ffffff, #00d4ff);
 }
 
 * {
@@ -60,7 +61,7 @@ ul {
 }
 
 .nav-links a:hover {
-  background: linear-gradient(135deg, #ffffff, #00d4ff);
+  background: var(--colorLightGradiant);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -106,7 +107,7 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
-  background: linear-gradient(135deg, #ffffff, #00d4ff);
+  background: var(--colorLightGradiant);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -146,7 +147,7 @@ ul {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #ffffff, #00d4ff);
+  background: var(--colorLightGradiant);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -166,7 +167,7 @@ ul {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, #ffffff, #00d4ff);
+  background: var(--colorLightGradiant);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -224,7 +225,7 @@ ul {
 
 .testimonials-section {
   padding: 8rem 2rem;
-  background: linear-gradient(180deg, black 0%, #1a1a2e 100%);
+  background: linear-gradient(180deg, black 0%, #1a1a2e 50%, black 100%);
 }
 
 .testimonials-carousel {
@@ -285,6 +286,178 @@ ul {
   background: #00d4ff;
   transform: scale(1.2);
 }
+
+
+
+.testimonials {
+  background: #0a0a0a;
+  color: var(--colorLight);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  font-style: italic;
+  color: #ccc;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 1rem;
+  color: var(--colorLightBlue);
+  font-weight: bold;
+}
+
+/* ===== Contact Content ===== */
+.section-contact {
+  height: 100vh;
+  color: white;
+  padding: 3rem 4rem;
+}
+
+.section-contact .container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-centent {
+  width: 45%;
+}
+
+.content-top {
+  margin: 30px 0;
+  ;
+}
+
+.content-top h1 {
+  background: var(--colorLightGradiant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+}
+
+.content-top p {
+  color: #888;
+  padding-right: 100px;
+  font-size: 1.3rem;
+}
+
+.content-buttom .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+.contact-centent .info .icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: 1px solid rgba(211, 211, 211, 0.589);
+}
+
+.contact-form {
+  width: 40%;
+}
+
+.contact-form form {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form form .input {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.contact-form form .input input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.contact-form form .input input:focus,
+.contact-form form .input select:focus,
+.contact-form form .input textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.contact-form form .input input::placeholder,
+.contact-form form .input textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form form .input select {
+  cursor: pointer;
+}
+
+.contact-form form .input select option {
+  background: #1a1a2e;
+  color: white;
+}
+
+.contact-form form .input textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  margin-top: 1rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+}
+
+.form-submit:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+}
+
+.form-submit.submitted {
+  background: linear-gradient(135deg, #00cc66, #00994d);
+  box-shadow: 0 8px 25px rgba(0, 204, 102, 0.3);
+}
+
+.form-submit:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 
 /* ===== Tablets (≤ 1024px) ===== */
 @media (max-width: 1024px) {
@@ -361,34 +534,4 @@ ul {
   .feature-card {
     width: 100%;
   }
-}
-
-.testimonials {
-  background: #0a0a0a;
-  color: var(--colorLight);
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.testimonials-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.testimonial {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 8px;
-  font-style: italic;
-  color: #ccc;
-}
-
-.testimonial span {
-  display: block;
-  margin-top: 1rem;
-  color: var(--colorLightBlue);
-  font-weight: bold;
 }

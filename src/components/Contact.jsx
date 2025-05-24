@@ -36,7 +36,7 @@ function Contact() {
                         <div className="content-buttom">
                             <div className="info email">
                                 <div className="icon">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href=""><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                                 <div className="info-contact">
                                     <h4>Email Us</h4>
@@ -45,7 +45,7 @@ function Contact() {
                             </div>
                             <div className="info phone">
                                 <div className="icon">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <a href=""><i class="fa-solid fa-phone"></i></a>
                                 </div>
                                 <div className="info-contact">
                                     <h4>Call Us</h4>

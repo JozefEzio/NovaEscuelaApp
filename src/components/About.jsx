@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import schoolImg from '../assets/two students studyin.png';
+import schoolImg from '../assets/aboutUs.png';
 function About() {
     useEffect(() => {
         AOS.init({ duration: 1000 });

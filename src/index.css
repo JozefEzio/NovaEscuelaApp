@@ -165,7 +165,8 @@ d-none {
   width: 100%;
   border-radius: 5px;
 }
-
+.about-container .context{
+}
 
 .about-container .container .context h1 {
   font-size: 2.4rem;

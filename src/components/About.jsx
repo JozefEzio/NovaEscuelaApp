@@ -8,7 +8,7 @@ function About() {
     }, []);
 
     return (
-        <div className="about-container about" data-aos="fade-up" id='about'>
+        <section className="about-container about" data-aos="fade-up" id='about'>
             <div className="container">
                 <div className="context">
                     <h1>About Us</h1>
@@ -33,7 +33,7 @@ function About() {
                 </div>
 
             </div>
-        </div>
+        </section>
     );
 }
 

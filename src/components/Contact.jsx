@@ -17,12 +17,36 @@ function Contact() {
             [name]: value
         }));
     }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        SetIsSubmited(true);
-        setTimeout(() => SetIsSubmited(false), 3000);
-        setFormData({ name: '', email: '', role: '', organization: '', message: '' });
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("https://formspree.io/f/mqaqvjrr", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                SetIsSubmited(true);
+                setTimeout(() => SetIsSubmited(false), 3000);
+                setFormData({
+                    name: '',
+                    email: '',
+                    role: '',
+                    organization: '',
+                    message: ''
+                });
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            alert("Network error. Please try again later.");
+        }
+    };
 
     return (
         <>
@@ -55,7 +79,7 @@ function Contact() {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <form action="" onSubmit={handleSubmit}>
+                        <form action="https://formspree.io/f/mqaqvjrr" method='POST' onSubmit={handleSubmit}>
                             <div className="input">
                                 <input type="text" placeholder='Full Name' required name="name" value={formData.name} onChange={handleInput} />
                             </div>
